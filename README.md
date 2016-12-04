@@ -28,7 +28,7 @@ pyndico = pyndico.Pyndico(
  
  **Typical event structure:**
  ```
- >> response['results'][0]'keys()
+ >> response['results'][0].keys()
  [u'startDate',
  u'endDate',
  u'creator',
@@ -74,3 +74,5 @@ from https://indico.readthedocs.io/en/latest/http_api/common/
 | descending | c         | Sort the results in descending order when set to yes.                                                                                                |
 | tz         | -         | Assume given timezone (default UTC) for specified dates. Example: Europe/Lisbon.  
  
+## To do:
+Have `Pyndico`return custom response objects for filtering, searching etc. E.g `PyndicoCatergoryResponse` and `PyndicoEventResponse`
