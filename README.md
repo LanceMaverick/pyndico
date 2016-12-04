@@ -14,6 +14,7 @@ pyndico = pyndico.Pyndico(
  The url to the indico server is required, but the key arguments are optional. For most queries, the `api_key` will be required.
  
  ### Getting data:
+ 
  There are three methods, `Pyndico.get_event()`, `Pyndico.get_category()` and `Pyndico.get_room()`. These are abstractions of the method `Pyndico.get()` which can be used for general calls where the type of data is set manually, with the key word argument `qtype`. e.g `Pyndico.get(qtype = 'room', ...)`
  **Example queries:**
  ```
