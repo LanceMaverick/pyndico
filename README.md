@@ -59,7 +59,7 @@ pyndico = pyndico.Pyndico(
 ## Common parameters
 from https://indico.readthedocs.io/en/latest/http_api/common/
 | **Param**  | **Short** | **Description**                                                                                                                                      |
-|------------|-----------|------------------------------------------------------------------------------------------------------------------------------------------------------|
+|------------:|-----------:|------------------------------------------------------------------------------------------------------------------------------------------------------:|
 | from/to    | f/t       | YYYY-MM-DD[THH:MM], ‘today’, ‘yesterday’, ‘tomorrow’ ‘now’, days in the future/past: ‘[+/-]DdHHhMMm’  |
 | pretty     | p         | Pretty-print the output. When exporting as JSON it will include whitespace to make the json more human-readable.                                     |
 | onlypublic | op        | Only return results visible to unauthenticated users when set to yes.                                                                                |
