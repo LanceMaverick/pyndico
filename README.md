@@ -60,7 +60,7 @@ pyndico = pyndico.Pyndico(
 from https://indico.readthedocs.io/en/latest/http_api/common/
 | **Param**  | **Short** | **Description**                                                                                                                                      |
 |------------|-----------|------------------------------------------------------------------------------------------------------------------------------------------------------|
-| from/to    | f/t       | Accepted formats:  * ISO 8601 subset - YYYY-MM-DD[THH:MM]  * ‘today’, ‘yesterday’, ‘tomorrow’ and ‘now’  * days in the future/past: ‘[+/-]DdHHhMMm’  |
+| from/to    | f/t       | Accepted formats:  ISO 8601 subset - YYYY-MM-DD[THH:MM],   ‘today’, ‘yesterday’, ‘tomorrow’ and ‘now’, days in the future/past: ‘[+/-]DdHHhMMm’  |
 | pretty     | p         | Pretty-print the output. When exporting as JSON it will include whitespace to make the json more human-readable.                                     |
 | onlypublic | op        | Only return results visible to unauthenticated users when set to yes.                                                                                |
 | onlyauthed | oa        | Fail if the request is unauthenticated for any reason when this is set to yes.                                                                       |
