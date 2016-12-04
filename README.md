@@ -75,4 +75,4 @@ from https://indico.readthedocs.io/en/latest/http_api/common/
 | tz         | -         | Assume given timezone (default UTC) for specified dates. Example: Europe/Lisbon.  
  
 ## To do:
-Have `Pyndico`return custom response objects for filtering, searching etc. E.g `PyndicoCategoryResponse` and `PyndicoEventResponse`
+Have `Pyndico`return custom response objects for filtering, searching etc. e.g `PyndicoCategoryResponse` and `PyndicoEventResponse`
