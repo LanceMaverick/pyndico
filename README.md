@@ -6,7 +6,7 @@ Very basic python wrapper for the Indico conferencing and organisation tool
 ### Setup:
 ```
 import pyndico
-pyndico = pyndico.Pyndico(
+my_pyndico = pyndico.Pyndico(
                   'my.indico-server.com', 
                   api_key = API_KEY, 
                   secret_key = SECRET_KEY)
@@ -18,7 +18,7 @@ pyndico = pyndico.Pyndico(
  There are three methods, `Pyndico.get_event()`, `Pyndico.get_category()` and `Pyndico.get_room()`. These are abstractions of the method `Pyndico.get()` which can be used for general calls where the type of data is set manually, with the key word argument `qtype`. e.g `Pyndico.get(qtype = 'room', ...)`
  **Example queries:**
  ```
- response = pyndico.get_category(
+ response = my_pyndico.get_category(
                           qtype_id: '6734', #category ID
                           from = 'today'
                           to = 'tomorrow'
