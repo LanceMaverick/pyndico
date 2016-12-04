@@ -6,7 +6,7 @@ Very basic python wrapper for the Indico conferencing and organisation tool
 ### Setup:
 ```
 import pyndico
-pyndico = pyndico.Pyndico(
+my_pyndico = pyndico.Pyndico(
                   'my.indico-server.com', 
                   api_key = API_KEY, 
                   secret_key = SECRET_KEY)
@@ -14,10 +14,11 @@ pyndico = pyndico.Pyndico(
  The url to the indico server is required, but the key arguments are optional. For most queries, the `api_key` will be required.
  
  ### Getting data:
+ 
  There are three methods, `Pyndico.get_event()`, `Pyndico.get_category()` and `Pyndico.get_room()`. These are abstractions of the method `Pyndico.get()` which can be used for general calls where the type of data is set manually, with the key word argument `qtype`. e.g `Pyndico.get(qtype = 'room', ...)`
  **Example queries:**
  ```
- response = pyndico.get_category(
+ response = my_pyndico.get_category(
                           qtype_id: '6734', #category ID
                           from = 'today'
                           to = 'tomorrow'
@@ -27,7 +28,7 @@ pyndico = pyndico.Pyndico(
  
  **Typical event structure:**
  ```
- >> response['results'][0]'keys()
+ >> response['results'][0].keys()
  [u'startDate',
  u'endDate',
  u'creator',
@@ -61,7 +62,7 @@ from https://indico.readthedocs.io/en/latest/http_api/common/
 
 |**Param**|**Short**|**Description**|
 |------------:|-----------:|------------------------------------------------------------------------------------------------------------------------------------------------------:|
-| from/to    | f/t       | YYYY-MM-DD[THH:MM], ‘today’, ‘yesterday’, ‘tomorrow’ ‘now’, days in the future/past: ‘[+/-]DdHHhMMm’  |
+| from/to    | f/t       | YYYY-MM-DD[THH:MM]; ‘today’, ‘yesterday’, ‘tomorrow’ ‘now’; days in the future/past: ‘[+/-]DdHHhMMm’  |
 | pretty     | p         | Pretty-print the output. When exporting as JSON it will include whitespace to make the json more human-readable.                                     |
 | onlypublic | op        | Only return results visible to unauthenticated users when set to yes.                                                                                |
 | onlyauthed | oa        | Fail if the request is unauthenticated for any reason when this is set to yes.                                                                       |
@@ -73,3 +74,5 @@ from https://indico.readthedocs.io/en/latest/http_api/common/
 | descending | c         | Sort the results in descending order when set to yes.                                                                                                |
 | tz         | -         | Assume given timezone (default UTC) for specified dates. Example: Europe/Lisbon.  
  
+## To do:
+Have `Pyndico`return custom response objects for filtering, searching etc. e.g `PyndicoCategoryResponse` and `PyndicoEventResponse`
